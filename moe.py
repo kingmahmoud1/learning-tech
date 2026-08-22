@@ -18,4 +18,4 @@ while True :
     finsh=input("To leave , Write leave:\n")
     fin=finsh.lower()
     if fin=="leave":
-        print("hi")
+       break
