@@ -7,6 +7,7 @@ raw_list={"name":["mahmoud","ALi","mona","salma","mahmoud"],
 
 
 df=pd.DataFrame(raw_list)
+print("**********The full list**********")
 print(df)
 #clean
  #نزيل المتكرر
@@ -20,14 +21,14 @@ print(df)
  #العمر بالسالب
 df=df[df["age"]>0]
 df=df[df["score"]>0]
-print(df)
+#print(df)
 #prepare data for com
 df["gander_code"]=df["gender"].map({"male":0,"famale":1})
 df["score_normalized"]=df["score"]/100
-
+print("********The list after correction************")
 print(df)
 
 #choose random data 
 sample=df.sample(n=1,random_state=42)
-
+print("************* Select it from the list***************")
 print(sample)
