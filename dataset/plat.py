@@ -13,11 +13,11 @@ print(df)
  #نزيل المتكرر
 df=df.drop_duplicates()
 
-print(df)
+#print(df)
  #مفيش بيانات فبعمل المتوقع انه المتوسط
 df["age"]=df["age"].fillna(df["age"].mean())
 
-print(df)
+#print(df)
  #العمر بالسالب
 df=df[df["age"]>0]
 df=df[df["score"]>0]
