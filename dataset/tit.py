@@ -6,7 +6,7 @@ conn=sqlite3.connect("m.db")
 df=pd.read_csv("titanic.txt")
 df.to_sql("m",conn,if_exists="replace")
 # نستكشف الداتا ونشوف تفاصيلها قبل التنظيف
-print(df["gender"].value_counts())
+print(df["Sex"].value_counts())
 print(df.isnull().sum())
 print(df.describe())
 print(df.groupby("Sex")["Survived"].mean())

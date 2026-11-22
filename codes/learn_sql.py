@@ -2,8 +2,13 @@ import sqlite3
 conn=sqlite3.connect("learn_sql.db")
 cursor=conn.cursor()
 
-cursor.execute("CREATE TABLE if not exists TABLE1 (id integer primary key AUTOINCREMENT,name TEXT NOT NULL, age INTEGER check (age>0), gpa REAL DEFAULT 0.0 check (gpa>=0 and gpa<=4),user_name text unique not null , partion text check(lower(partion) in ('ai','cs','it')))")
+cursor.execute("""CREATE TABLE if not exists TABLE1 
+(id integer primary key AUTOINCREMENT,name TEXT NOT NULL, age INTEGER check (age>0), gpa REAL DEFAULT 0.0 check (gpa>=0 and gpa<=4),
+user_name text unique not null ,
+ partion text check(lower(partion) in ('ai','cs','it')))")
 
+
+""")
 students2_data = {
     "name": [
         "Mahmoud", "Ahmed", "Salma", "Omar", "Mona",
